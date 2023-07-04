@@ -3,7 +3,7 @@ WORKDIR $GOPATH/src/github.com/box/kube-applier
 COPY . $GOPATH/src/github.com/box/kube-applier
 RUN make build
 
-FROM ubuntu
+FROM ubuntu:22.10
 LABEL maintainer="Greg Lyons<glyons@box.com>"
 WORKDIR /root/
 ADD templates/* /templates/
